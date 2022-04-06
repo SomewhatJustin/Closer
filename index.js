@@ -4,5 +4,33 @@ import { questions } from './questions.js'
 const nextBtn = document.getElementById("next-btn")
 const questionText = document.getElementById("question")
 
-// PICKING THE QUESTION
-questionText.innerHTML = questions.easy[0]
+// SET DIFFICULTY
+let increment = function () {
+  clickCount += 1
+  console.log(clickCount)
+}
+
+let clickCount = 0
+nextBtn.addEventListener("click", increment)
+
+function setDifficulty() {
+  if (clickCount < 3) {
+    return "easy"
+  } else if (3 <= clickCount && clickCount < 5) {
+    console.log("medium")
+    return "medium"
+  } else {
+    console.log("hard")
+    return "hard"
+  }
+}
+
+// CHANGE THE QUESTION
+let renderQuestion = function () {
+  questionText.innerHTML = questions[setDifficulty()][0]
+}
+
+nextBtn.addEventListener("click", renderQuestion)
+
+// DISPLAY THE QUESTION ON LOAD
+renderQuestion()
