@@ -1,0 +1,25 @@
+body {
+  font-family: sans-serif;
+  margin: 30px;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+button {
+  padding: 10px;
+  background: #0077b6;
+  color: white;
+  border: none;
+  box-shadow: #33333359 0px 1px 15px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #023e8a;
+}
+
+button:active {
+  background: #03045e;
+}

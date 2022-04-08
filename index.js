@@ -27,7 +27,7 @@ function setDifficulty() {
 
 // CHANGE THE QUESTION
 let renderQuestion = function () {
-  questionText.innerHTML = questions[setDifficulty()][0]
+  questionText.innerHTML = questions[setDifficulty()][Math.floor(Math.random() * questions[setDifficulty()].length)]
 }
 
 nextBtn.addEventListener("click", renderQuestion)
