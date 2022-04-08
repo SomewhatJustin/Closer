@@ -3,8 +3,13 @@ body {
   margin: 30px;
 }
 
+h1 {
+  font-size: 1rem;
+}
+
 h2 {
   font-weight: 400;
+  font-size: 2rem;
 }
 
 button {
@@ -14,6 +19,8 @@ button {
   border: none;
   box-shadow: #33333359 0px 1px 15px;
   border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 10px 35px;
 }
 
 button:hover {
