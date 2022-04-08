@@ -12,6 +12,12 @@ h2 {
   font-size: 2rem;
 }
 
+h3 {
+  font-weight: 300;
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
 button {
   padding: 10px;
   background: #0077b6;

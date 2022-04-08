@@ -3,6 +3,7 @@ import { questions } from './questions.js'
 // GRAB FROM THE DOM
 const nextBtn = document.getElementById("next-btn")
 const questionText = document.getElementById("question")
+const difficultyDisplay = document.getElementById("difficulty")
 
 // SET DIFFICULTY
 let increment = function () {
@@ -16,7 +17,7 @@ nextBtn.addEventListener("click", increment)
 function setDifficulty() {
   if (clickCount < 3) {
     return "easy"
-  } else if (3 <= clickCount && clickCount < 5) {
+  } else if (3 <= clickCount && clickCount < 6) {
     console.log("medium")
     return "medium"
   } else {
@@ -28,6 +29,7 @@ function setDifficulty() {
 // CHANGE THE QUESTION
 let renderQuestion = function () {
   questionText.innerHTML = questions[setDifficulty()][Math.floor(Math.random() * questions[setDifficulty()].length)]
+  difficultyDisplay.innerHTML = `Difficulty: ${setDifficulty()}`
 }
 
 nextBtn.addEventListener("click", renderQuestion)
